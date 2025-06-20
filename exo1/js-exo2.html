@@ -13,45 +13,58 @@
     <main> 
         <h1 style="text-align: center;"> Exo JavaScript </h1>    
         <section>
-            <!-- <script> // Exercice 3
+             <script> // Exercice 3
 
-                for (let i = 1; i < 200; i++) {
-                    if (i % 3 === 0 && i % 5 === 0) {
-                        console.log("xFive,xThree");
-                    } else if (i % 3 === 0) {
-                        console.log("xThree");
-                    } else if (i % 5 === 0) {
-                        console.log("xFive");
-                    } else {
-                        console.log(i);
-                    }
-                }
+                // for (let i = 1; i < 200; i++) {
+                //     if (i % 3 === 0 && i % 5 === 0) {
+                //         console.log("xFive,xThree");
+                //     } else if (i % 3 === 0) {
+                //         console.log("xThree");
+                //     } else if (i % 5 === 0) {
+                //         console.log("xFive");
+                //     } else {
+                //         console.log(i);
+                //     }
+                // }
             </script> 
             <script> // Exercice 3 ternaire avancer 
 
-                for (let i = 1; i < 200; i++) 
-                        (i % 15 === 0) ? console.log("xFive,xThree") 
-                        :(i % 3 === 0)   ? console.log("xThree") 
-                        :(i % 5 === 0)   ? console.log("xFive") 
-                        : console.log(i);
+                // for (let i = 1; i < 200; i++) 
+                //         (i % 15 === 0) ? console.log("xFive,xThree") 
+                //         :(i % 3 === 0)   ? console.log("xThree") 
+                //         :(i % 5 === 0)   ? console.log("xFive") 
+                //         : console.log(i);
             
                 
-            </script>-->
-            <script>
-                // function multiplierParDeux(nombre) {
-                //     return nombre*2;
+            </script>
+            <script> //cours des fonction dans la page exo-3
+                // function estMultipleDeTrois(nombre) {
+                //     return nombre %3===0;
                 // }
-                // let resultat = multiplierParDeux(8);
-                // console.log(resultat);
+                // estMultipleDeTrois(123456788) ? console.log("Le nombre est un multiple de 3") 
+                //                     : console.log("Le nombre n'est pas un multiple de 3");  
+            </script>
+            <script>
+                function jeuDeNombre() {
+                    let nombreMystere = Math.floor(Math.random() * 100) + 1; // Nombre mystère entre 1 et 100
+                    let essais = 0;
+                    let trouve = false;
+                    console.log(nombreMystere); // Pour le débogage, afficher le nombre mystère dans la console
+                    prompt("Bienvenue dans le jeu de devinette ! Essayez de trouver le nombre mystère entre 1 et 100.");
+                    // while (!trouve) {
+                    //     let proposition = parseInt(prompt("Devinez le nombre mystère (entre 1 et 100) :"));
+                    //     essais++;
 
-                 function diviserParDeux(nombre) {
-                    return nombre / 2;
+                    //     if (proposition < nombreMystere) {
+                    //         alert("C'est plus grand !");
+                    //     } else if (proposition > nombreMystere) {
+                    //         alert("C'est plus petit !");
+                    //     } else {
+                    //         alert(`Bravo ! Vous avez trouvé le nombre ${nombreMystere} en ${essais} essais.`);
+                    //         trouve = true;
+                    //     }
+                    // }
                 }
-                let resultat1 = diviserParDeux(2);
-                let resultat2 = diviserParDeux(4);
-                console.log("alors 2 deviser par 2 Ca donne ==>", resultat1);
-                console.log("alors 4 deviser par 2 Ca donne ==>", resultat2);
-                
             </script>
         </section>
     </main>

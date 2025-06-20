@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="Utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="" rel="stylesheet">
+        <title>  Js-exo4 </title>
+    </head>
+<body>
+    <header>
+    </header>
+
+    <main> 
+        <h1 style="text-align: center;"> Exo JavaScript </h1>    
+        <section>
+            <script> //Exercice 1 exo-4
+                // let resultat = prompt("entrez votre nombre");
+                // function diviserParDeux(nombre) {
+                //     return nombre / 2;
+                // }
+                // let result =   diviserParDeux(resultat) 
+                // alert(result);
+            </script>
+            <script> //Exercice 2 exo-4
+                // let nb1 = parseFloat(prompt("entrez votre nombre"));
+                // let nb2 = parseFloat(prompt("entrez votre nombre"));
+                // function somme(nombre1, nombre2) {
+                //     return nombre1 + nombre2;
+                // }
+                // let result = somme(nb1,nb2);
+                // alert(result);
+            </script>
+            <script> //Exercice 3 exo-4
+            // let nb1 = parseFloat(prompt("entrez votre nombre"));
+            // function signe(nombre) { // en ternair
+            //     let vari = (nombre >0) ? "positif" : (nombre<0) ? "négatif" : (nombre===0) ? "null" : "je veux un chiffre connard";
+            //     // if (nombre > 0) {
+            //     //     return "positif";
+            //     // } else if (nombre < 0) {
+            //     //     return "négatif";
+            //     // } else if (nombre === 0) {
+            //     //     return "zéro";
+            //     // }else {
+            //     //     return "je veux un chiffre conard !";
+            //     // } 
+            //     return vari;
+            // }
+            // let result = signe(nb1);
+            // alert(result);
+            </script>    
+            <script> // exercice 4 exo-4
+                let nb = parseInt(prompt("Entrez un nombre pour calculer sa factorielle :"));
+                function factoriel(nombre) {
+                    let fact = (nombre<0) ? "Le nombre doit être positif" : (nombre === 0 || nombre === 1) ? 1 : (function() {
+                                                    let resultat = 1;
+                                                    for (let i = 2; i <= nombre; i++) {
+                                                    resultat *= i;
+                                                    }
+                                                    return resultat;
+                                                })();
+                                                return fact;
+                                            
+                    // if (nombre < 0) {
+                    //     return "Le nombre doit être positif";
+                    // } else if (nombre === 0 || nombre === 1) {
+                    //     return 1;
+                    // } else {
+                    //     let resultat = 1;
+                    //     for (let i = 2; i <= nombre; i++) {
+                    //         resultat *= i;
+                    //     }
+                    //     return resultat;
+                    // }
+                }
+                let result = factoriel(nb);
+                alert("La factorielle de " + nb + " est " + result);
+            </script>
+        </section>
+    </main>
+</body>
+
+</html>
