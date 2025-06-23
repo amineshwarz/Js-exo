@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="Utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="" rel="stylesheet">
+        <title>  Js-exo4 </title>
+    </head>
+<body>
+    <header>
+    </header>
+
+    <main> 
+        <h1 style="text-align: center;"> Exo JavaScript ChiFouMi</h1>    
+        <section>
+            <script> 
+
+            function comparer(choix1,choix2) { // fonction pour comparer les choix du joueur et de l'ordinateur
+                if (choix1 === choix2){
+                    return "égalité";
+                }  
+                       
+                switch (choix1) {
+                    case "pierre":
+                        return choix2 === "ciseaux" ? "L'Ordi a gagné" : "joueur a gagné";
+                    case "feuille":
+                        return choix2 === "pierre" ? "L'Ordi a gagné" : "joueur a gagné";
+                    case "ciseaux":
+                        return choix2 === "feuille" ? "L'Ordi a gagné" : "joueur a gagné";
+                    default:
+                        return "Votre choix est invalide, veuillez choisir entre pierre, feuille ou ciseaux.";
+                }
+            }
+
+            function joueurVsOrdi() {
+                //declaration Variables
+                let scoreJoueur = 0;
+                let scoreOrdi = 0;
+                let nombreDeParties = parseInt(prompt("Combien de parties voulez-vous jouer ?"));
+                // boucle for pour definir les nombre de partie
+                for (let i = 0; i < nombreDeParties; i++) {
+                    let choixJoueur = prompt("Choisissez pierre, feuille ou ciseaux :").toLowerCase(); // le choix du joueur
+                    let choixOrdi = Math.random(); // le choix de l'ordinateur aléatoire avec Math.random()
+                    if (choixOrdi < 0.33) {
+                        choixOrdi = "pierre";
+                    } else if (choixOrdi < 0.66) {
+                        choixOrdi = "feuille";
+                    } else {
+                        choixOrdi = "ciseaux";
+                    }
+                    let resultat = comparer(choixJoueur, choixOrdi); //comparer les résultats
+
+                    // Afficher le résultat
+                    alert("Vous avez choisi " + choixJoueur + " l'ordinateur a choisi " + choixOrdi + " Résultat : "+ resultat);
+                    // Mettre à jour les scores
+                    if (resultat === "joueur a gagné") {
+                        scoreJoueur++;
+                    } else if (resultat === "La machine a gagné") {
+                        scoreOrdi++;
+                    }else if (resultat === "égalité") {
+                        // Ne rien faire, c'est une égalité
+                    } else {
+                        alert(resultat); // Afficher le message d'erreur si le choix est invalide
+                    }
+                }
+                alert("Score final : Joueur => " + scoreJoueur + " Ordinateur => " + scoreOrdi); 
+            }
+                
+            joueurVsOrdi();
+
+                 
+            
+
+                
+
+
+                
+            </script>
+        </section>
+    </main>
+</body>
+
+</html>
