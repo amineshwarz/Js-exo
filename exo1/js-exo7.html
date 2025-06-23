@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="Utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="" rel="stylesheet">
+        <title>  Js-exo7 les Tableaux </title>
+    </head>
+<body>
+    <header>
+    </header>
+
+    <main> 
+        <h1 style="text-align: center;"> Exo JavaScript les Tableaux</h1>    
+        <section>
+            <script> // Exercice 7 epicerie 
+            // let fruits = ["mangue", "raisin", "figue","kiwi"];
+
+            // console.log(fruits);
+
+            // let commande = prompt("Les produits de l'épicerie : " + fruits.join(", ") + ".\n\nQuel fruit voulez-vous acheter ?");
+            // if (fruits.includes(commande)) {
+            //     fruits.splice(fruits.indexOf(commande), 1); // Supprimer le fruit de la liste
+            //     alert("Le fruit " + commande + " est disponible, merci pour votre achat !");
+            //     alert("Il reste les fruits suivants : " + fruits.join(", ") + ".");
+            // } else {
+            //     alert("Désolé, le fruit " + commande + " n'est pas disponible.");
+            // }
+            </script>
+
+            <script> // Exercice 7 jeu du pendu
+            let mauvaiseLettres = [];
+            let bonneLettres = ['s', 'u', 'p', 'e', 'r'];
+            for(i=0; i<10; i++) {
+                let lettre = prompt("Entrez une lettre : ");
+                if (bonneLettres.includes(lettre)) {
+                    alert("Bien joué ! La lettre (" + lettre + ") est dans le mot.");
+                    bonneLettres.splice(bonneLettres.indexOf(lettre), 1);
+                } else {
+                    mauvaiseLettres.push(lettre);
+                    alert("Désolé, la lettre (" + lettre + ") n'est pas dans le mot. \n Lettres incorrectes : " + mauvaiseLettres.join(", "));
+                    mauvaiseLettres.splice(mauvaiseLettres.indexOf(lettre), lettre);
+                }
+                if (bonneLettres.length === 0) {
+                    alert("Félicitations ! Vous avez trouvé toutes les lettres du mot.");
+                    break;
+                }
+            }
+            </script>
+        </section>
+    </main>
+</body>
+
+</html>

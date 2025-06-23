@@ -22,11 +22,11 @@
                        
                 switch (choix1) {
                     case "pierre":
-                        return choix2 === "ciseaux" ? "L'Ordi a gagné" : "joueur a gagné";
+                        return choix2 === "ciseaux" ? "joueur a gagné" : "l'ordi a gagné";
                     case "feuille":
-                        return choix2 === "pierre" ? "L'Ordi a gagné" : "joueur a gagné";
+                        return choix2 === "pierre" ? "joueur a gagné" : "l'ordi a gagné";
                     case "ciseaux":
-                        return choix2 === "feuille" ? "L'Ordi a gagné" : "joueur a gagné";
+                        return choix2 === "feuille" ? "joueur a gagné" : "l'ordi a gagné";
                     default:
                         return "Votre choix est invalide, veuillez choisir entre pierre, feuille ou ciseaux.";
                 }
@@ -51,14 +51,16 @@
                     let resultat = comparer(choixJoueur, choixOrdi); //comparer les résultats
 
                     // Afficher le résultat
-                    alert("Vous avez choisi " + choixJoueur + " l'ordinateur a choisi " + choixOrdi + " Résultat : "+ resultat);
+                    alert("Vous avez choisi (" + choixJoueur + ") l'ordinateur a choisi (" + choixOrdi + ") Résultat : "+ resultat);
                     // Mettre à jour les scores
                     if (resultat === "joueur a gagné") {
                         scoreJoueur++;
-                    } else if (resultat === "La machine a gagné") {
+                    } else if (resultat === "L'ordi a gagné") {
                         scoreOrdi++;
                     }else if (resultat === "égalité") {
-                        // Ne rien faire, c'est une égalité
+                        scoreJoueur++;
+                        scoreOrdi++;
+
                     } else {
                         alert(resultat); // Afficher le message d'erreur si le choix est invalide
                     }
