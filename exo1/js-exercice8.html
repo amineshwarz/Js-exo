@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="Utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="" rel="stylesheet">
+        <title>  JavaScript les Objet</title>
+    </head>
+<body>
+    <header>
+    </header>
+
+    <main> 
+        <h1 style="text-align: center;"> Exo JavaScript Les Objet</h1>    
+        <section>
+            <script> //exercice annuaire telephonique
+            // let annuaire = {
+            //     Amine: "06 11 11 11 11",
+            //     "Ayoub": "06 22 22 22 22",
+            //     "Adam":"06 33 33 33 33",
+            // };
+            // //alert("le numero de Adam est :" +annuaire["Adam"]);
+
+            // // let nom = prompt("Entrez le nom de la personne :");
+            // // alert("Le numéro de " + annuaire[nom]);
+
+
+            // for (let nom in annuaire) {
+            //     alert("Le numéro de " + nom + " est : " + annuaire[nom]);
+            //     console.log(nom + " : " + annuaire[nom]);
+            // } 
+            // annuaire["Monir"] = "06 44 44 44 44";
+            // console.log("les noms de ma reperoire : " + Object.keys(annuaire).join(", "));
+            // delete annuaire["Monir"];
+            // console.log("les noms de ma reperoire : " + Object.keys(annuaire).join(", "));
+
+            </script>
+            <script> // exercice annuaire telephonique avec fonction
+             let annuaire = {
+                "Amine": "06 11 11 11 11",
+                "Ayoub": "06 22 22 22 22",
+                "Adam":"06 33 33 33 33",
+            };
+            let saisie = prompt(" Bonjour ! \n Taper \n 'r' pour rechercher \n 'l' pour afficher la liste \n 'a' pour ajouter \n 's' pour supprimer \n 'q' pour quitter");
+            switch (saisie) {
+                case 'r':
+                    let nom = prompt("Entrez le nom de la personne :");
+                    if (annuaire[nom]) {
+                        alert("Le numéro de " + nom + " est : " + annuaire[nom]);
+                    } else {
+                        alert("Nom non trouvé dans l'annuaire.");
+                    }
+                    break;
+                case 'l':
+                    let liste = Object.entries(annuaire).join(", ");
+                    alert("Les noms dans l'annuaire sont : " + liste);
+                    break;
+                
+                }
+ 
+            
+
+            </script>
+        </section>
+    </main>
+</body>
+
+</html>
