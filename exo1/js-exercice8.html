@@ -41,46 +41,50 @@
                 "Ayoub": "06 22 22 22 22",
                 "Adam":"06 33 33 33 33",
             };
-            let choixUser = prompt(" Bonjour ! \n Taper \n 'r' pour rechercher \n 'l' pour afficher la liste \n 'a' pour ajouter \n 's' pour supprimer \n 'q' pour quitter");
-            switch (choixUser) {
-                case 'r':
-                    let nom = prompt("Entrez le nom de la personne :");
-                    if (annuaire[nom]) {
-                        alert("Le numéro de " + nom + " est : " + annuaire[nom]);
-                    } else {
-                        alert("Aucun nom correspendant a votre recherche.");
-                    }
-                    break;
-                case 'l':
-                    var liste = Object.entries(annuaire).join(",   || ");
-                    alert("Les noms dans l'annuaire sont : " + liste);
-                    break;
-                case 'a':
-                    let addUser = prompt("Entrez le nom à ajouter :");
-                    let addNumber = parseInt(prompt("Entrez le numéro de téléphone :"));
-                    annuaire[addUser] = addNumber;
-                    console.log(annuaire);
-                    alert ("Le nom ( " + addUser + " ) a été ajouté avec le numéro ( " + addNumber + " )");
-                    break;
-                case 's':
-                    let deleteUser = prompt("Entrez le nom à supprimer :");
-                    if (annuaire[deleteUser]) {
-                        delete annuaire[deleteUser];
-                        alert("Le nom " + deleteUser + " a été supprimé.");
+            let choixUser;
+            while (choixUser !== 'q') {
+            // Boucle pour continuer jusqu'à ce que l'utilisateur choisisse de quitter
+                choixUser = prompt(" Bonjour ! \n Taper \n 'r' pour rechercher \n 'l' pour afficher la liste \n 'a' pour ajouter \n 's' pour supprimer \n 'q' pour quitter");
+            
+                switch (choixUser) {
+                    case 'r':
+                        let nom = prompt("Entrez le nom de la personne :");
+                        if (annuaire[nom]) {
+                            alert("Le numéro de " + nom + " est : " + annuaire[nom]);
+                        } else {
+                            alert("Aucun nom correspendant a votre recherche.");
+                        }
+                        break;
+                    case 'l':
+                        var liste = Object.entries(annuaire).join(",   || ");
+                        alert("Les noms dans l'annuaire sont : " + liste);
+                        break;
+                    case 'a':
+                        let addUser = prompt("Entrez le nom à ajouter :");
+                        let addNumber = parseInt(prompt("Entrez le numéro de téléphone :"));
+                        annuaire[addUser] = addNumber;
                         console.log(annuaire);
-                    } else {
-                        alert("Aucun nom correspondant à votre recherche.");
-                    }
-                    break;
-                case 'q':
-                    alert("Merci d'avoir utilisé l'annuaire. Au revoir !");
-                    break;
-                default:
-                    alert("Choix invalide. Veuillez réessayer.");
-                    break;
+                        alert ("Le nom ( " + addUser + " ) a été ajouté avec le numéro ( " + addNumber + " )");
+                        break;
+                    case 's':
+                        let deleteUser = prompt("Entrez le nom à supprimer :");
+                        if (annuaire[deleteUser]) {
+                            delete annuaire[deleteUser];
+                            alert("Le nom " + deleteUser + " a été supprimé.");
+                            console.log(annuaire);
+                        } else {
+                            alert("Aucun nom correspondant à votre recherche.");
+                        }
+                        break;
+                    case 'q':
+                        alert("Merci d'avoir utilisé l'annuaire. Au revoir !");
+                        break;
+                    default:
+                        alert("Choix invalide. Veuillez réessayer.");
+                        break;
                 }
  
-            
+            }
 
             </script>
         </section>
