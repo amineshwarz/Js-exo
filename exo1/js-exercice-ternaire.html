@@ -35,9 +35,73 @@
                 // alert(message);
             </script>
             <script> // Exercice 5 Ternaire avec tableau
-            
-
+                // let tab = [1, 2, 3, 4, 5, 0, -1, -2, -3];
+                // let message = tab.map((num) => (num > 0) ? "Positif" : (num < 0) ? "Négatif" : "Zéro").join(", ");
+                // alert("Les nombres sont : " + tab .join(", ") + "\n" + message);
             </script>
+            <script> //Exercice 6 Garder les nombres paires
+                // let tab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                // let message = tab.filter((n) => (n % 2 === 0) ? true : false).join(", ");
+                // let message2 = tab.filter((n) => (n % 2 !== 0) ? true : false).join(", ");
+                // alert("Les nombres sont : " + tab.join(", ") + "\n" + "Les nombres paires sont : " + message +"\nLes nombres impaires sont : " + message2);
+            </script>
+            <script> //Exercice 7 Filtrer les mots longs
+                // let mots=["fraise","banane", "kiwi","pomme","cerise","orange","mangue"];
+                // let message = mots.filter((mot) => (mot.length == 5));
+                // alert("Les mots sont : " + mots.join(", ") + "\n" + "Les mots de plus de 5 lettres sont : " + message).join(", ");
+            </script>
+            <script> // Exercie 8 Filtrer les objet selon une propriété
+                // let personnes = [
+                //     { nom: "Amine", age: 32 },
+                //     { nom: "Ayoub", age: 29 },
+                //     { nom: "Adam", age: 21 },
+                //     { nom: "Arthur", age: 5 }
+                // ];
+                // let message =personnes.filter((majeur) => (majeur.age >= 18)); 
+                // alert('les personnes avec leur age : \n' + personnes.map(p => `${p.nom} (${p.age} ans)`).join(", ") + "\n\nLes majeurs sont : " + message.map(p => `${p.nom} (${p.age} ans)`).join(", "));
+            </script>
+            <script> // Exercice 9 sommes des nombres
+                    // let tab = [45,1,30,12];
+                    // let somme = tab.reduce((a,b) => a + b);
+                    // alert("La somme des nombres dans le tableau est : " + somme);
+            </script> 
+            <script> // Exercice 10 produit des nombres
+                    // let tab = [45,1,30,12];
+                    // let produit = tab.reduce((a,b) => a * b);
+                    // alert("Le produit des nombres dans le tableau est : " + produit);
+            </script>
+            <script> // Exercice 10 - 1 racine carrer des nombres
+                    // let tab = [45,1,30,12];
+                    // let racineCarree = tab.reduce((a, b)=> Math.sqrt(a) + Math.sqrt(b));
+                    // alert("La racine carrée des nombres dans le tableau est : " + racineCarree);
+            </script>
+            <script> // Exemple d'instancié d'un objet POO
+                // class Etudiant {
+                //     constructor(age, nom) {
+                //         this.age = age;
+                //         this.nom = nom;
+                //         alert("étudiant instancié : ");
+                //     }                   
+                // }
+                // let etudiant1 =  new Etudiant(20 , "Amine");
+                // let etudiant2 = new Etudiant(25);
+                // alert("L'âge de l'étudiant 1 est : " + etudiant1.age + "\n" + "Le nom de l'étudiant 1 est : " + etudiant1.nom);
+            </script>
+            <script> // compter les voyelles dans un mots
+                let mot = prompt("Entrez un mot :");
+                let voyelle = "aeiouy";
+                mot = mot.toLowerCase(); 
+                
+                let compteur = mot.split('').reduce((a, b) => {
+                    return a + (voyelle.includes(b) ? 1 : 0);
+                }, 0);
+                alert("Le mot " + mot + " contient " + compteur + " voyelles.");
+
+                
+                // let nbVoyelles = mot.reduce((a,b) => a + (['a', 'e', 'i', 'o', 'u', 'y'],(b)));
+                // alert("Le mot " + mot + " contient " + nbVoyelles + " voyelles.");
+            </script>
+
 
         </section>
     </main>
