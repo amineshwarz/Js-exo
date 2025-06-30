@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style10.css">
+    <title>Exercice 10</title>
+</head>
+<body>
+
+<div> <!-- Exercie 10-2 Subrillance au clic-->
+    <p id="premier" >
+        1 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aliquid illum qui, dolore fuga ullam blanditiis voluptas, 
+    </p>
+    <p id="deuxieme" class="spoil">
+        2 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aliquid illum qui, dolore fuga ullam blanditiis voluptas, 
+    </p>
+    <p id="troisieme" class="spoil">
+        3 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aliquid illum qui, dolore fuga ullam blanditiis voluptas, 
+    </p>
+    <button on onclick="aa()" id="btn" type="button">Cacher</button>
+
+</div> 
+<div > <!-- Exercie 10-3 Filtrage par catégorie-->
+    <h2>Filtrage par catégorie</h2>
+    <div class="container">
+        <div class="item fruit" >Pomme</div>
+        <div class="item fruit" >Banane</div>
+        <div class="item legumes">Carotte</div>
+        <div class="item fruit">Orange</div>
+        <div class="item legumes">Brocoli</div>
+    </div>
+    <button onclick="filterItems('fruit')">Afficher les fruits</button>
+    <button onclick="filterItems('légume')">Afficher les légumes</button>
+    <button onclick="filterItems('all')">Tout afficher</button>
+</div>
+
+
+</body>
+<script src="script10.js"></script>
+</html>
