@@ -28,21 +28,58 @@
     </div> 
 </section>
 <!-- Exercie 10-3 Filtrage par catégorie-->
-<section>
-    <div > 
-        <h2>Filtrage par catégorie</h2>
-        <div class="container">
-            <div class="item fruit" >Pomme</div>
-            <div class="item fruit" >Banane</div>
-            <div class="item legumes">Carotte</div>
-            <div class="item fruit">Orange</div>
-            <div class="item legumes">Brocoli</div>
-        </div>
-        <button onclick="filterItems('fruit')">Afficher les fruits</button>
-        <button onclick="filterItems('légume')">Afficher les légumes</button>
-        <button onclick="filterItems('all')">Tout afficher</button>
-    </div>
+
+<section><!--Exercice filtrage par categorie-->
+    <label for="categorie-select">Filtrer par catégorie :</label>
+    <select id="categorie-select" onchange="filtrer(this.value)">
+        <option value="all">Tous</option>
+        <option value="ludique">Afrique</option>
+        <option value="pratique">Amerique</option>
+        <option value="sportif">Asie</option>
+        <option value="sportif">Europe</option>
+    </select>
+
+    <section id="produits">
+        <article class="ludique pratique">Argentine</article>
+        <article class="ludique sportif">Tanzanie</article>
+        <article class="pratique">Chine</article>
+        <article class="ludique">Suisse</article>
+        <article class="sportif">Mexique</article>
+        <article class="pratique">South Afrique</article>
+        <article class="ludique">Bali</article>
+        <article class="pratique sportif">Monaco</article>
+        <article class="ludique">Canada</article>
+        <article class="pratique">Egypte</article>
+        <article class="ludique">Vietnam</article>
+        <article class="pratique">Italy</article>
+
+    </section>
 </section>
+
+<h1>Produits</h1>
+    <div>
+        <button onclick="filtrerPays('tous')">Tous</button>
+        <button onclick="filtrerPays('Afrique')">Afrique</button>
+        <button onclick="filtrerPays('Amerique')">Amérique</button>
+        <button onclick="filtrerPays('Asie')">Asie</button>
+        <button onclick="filtrerPays('Europe')">Europe</button>
+    </div>
+    <div id="listePays">
+        <div class="pays Afrique">      <p>Tanzanie</p>     </div>
+        <div class="pays Amerique">     <p>Argentine</p>    </div>
+        <div class="pays Asie">         <p>Chine</p>        </div>
+        <div class="pays Europe">       <p>Suisse</p>       </div>
+        <div class="pays Amerique">     <p>Mexique</p>      </div>
+        <div class="pays Afrique">      <p>South Afrique</p></div>
+        <div class="pays Asie">         <p>Bali</p>         </div>
+        <div class="pays Europe">       <p>Monaco</p>       </div>
+        <div class="pays Amerique">     <p>Canada</p>       </div>
+        <div class="pays Afrique">      <p>Egypte</p>       </div>
+        <div class="pays Asie">         <p>Vietnam</p>      </div>
+        <div class="pays Europe">       <p>Italy</p>        </div>
+    </div>
+
+
 
 </body>
 <script src="script10.js"></script>

@@ -2,3 +2,22 @@
     display: none;
 }
 
+
+
+/* Exercice 10-4 (JS - Fitrage par catégorie) */
+.pays {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: 150px;
+}
+.produit img {
+    max-width: 100%;
+    height: auto;
+}
+.cache {
+    display: none;
+}
