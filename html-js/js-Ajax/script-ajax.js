@@ -26,7 +26,7 @@ function chargerUtilisateurs() {
             ul.innerHTML = '';
             data.forEach(user => {
                 const li = document.createElement('li'); // Crée un élément <li> pour chaque utilisateur
-                li.textContent = `Nom : ${user.name}, Email : ${user.email}`;
+                li.innerHTML = `<h3>Nom :</h3>\u00A0 ${user.name},\u00A0\u00A0<h3>Email : \u00A0</h3>${user.email}`;
                 ul.appendChild(li); // Ajoute le <li> à la <ul>
             });
         }).catch(error => {
@@ -41,7 +41,7 @@ function chargerPost() {
         .then(response => response.json())
         .then(data => {
             const post = document.getElementById('post'); // Sélectionne l'élément <div> où afficher le post
-            post.innerHTML = `<h2>${data.title}</h2><p>${data.body}</p>`; // Met le titre et le contenu du post dans la <div>
+            post.innerHTML = `<h2>${data.title}</h2><br><p>${data.body}</p>`; // Met le titre et le contenu du post dans la <div>
         })
         .catch(error => {
             console.error('Erreur lors de la récupération du post :', error);

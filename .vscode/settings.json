@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "terminal.integrated.enableVisualBell": true,
+    "accessibility.signalOptions.volume": 0
 }
