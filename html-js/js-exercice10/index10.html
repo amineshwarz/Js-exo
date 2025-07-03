@@ -6,15 +6,12 @@
     <link rel="stylesheet" href="style10.css">
     <title>Exercice 10</title>
 </head>
-<body>
+<body class="parallax">
 <header>
-    
-
-
 </header>
     <!-- Exercie 10-2 Subrillance au clic-->
 <section>
-    <div> 
+    <div class="exercie10-2"> 
         <p id="premier" >
             1 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aliquid illum qui, dolore fuga ullam blanditiis voluptas, 
         </p>
@@ -24,39 +21,13 @@
         <p id="troisieme" class="spoil">
             3 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aliquid illum qui, dolore fuga ullam blanditiis voluptas, 
         </p>
-        <button on onclick="aa()" id="btn" type="button">Cacher</button>
     </div> 
+    <button on onclick="aa()" id="btn" type="button">Cacher</button>
 </section>
 <!-- Exercie 10-3 Filtrage par catégorie-->
 
-<section><!--Exercice filtrage par categorie-->
-    <label for="categorie-select">Filtrer par catégorie :</label>
-    <select id="categorie-select" onchange="filtrer(this.value)">
-        <option value="all">Tous</option>
-        <option value="ludique">Afrique</option>
-        <option value="pratique">Amerique</option>
-        <option value="sportif">Asie</option>
-        <option value="sportif">Europe</option>
-    </select>
-
-    <section id="produits">
-        <article class="ludique pratique">Argentine</article>
-        <article class="ludique sportif">Tanzanie</article>
-        <article class="pratique">Chine</article>
-        <article class="ludique">Suisse</article>
-        <article class="sportif">Mexique</article>
-        <article class="pratique">South Afrique</article>
-        <article class="ludique">Bali</article>
-        <article class="pratique sportif">Monaco</article>
-        <article class="ludique">Canada</article>
-        <article class="pratique">Egypte</article>
-        <article class="ludique">Vietnam</article>
-        <article class="pratique">Italy</article>
-
-    </section>
-</section>
-
-<h1>Produits</h1>
+<section class="filtre">
+    <h1>Filtrage par catégorie (Pays)</h1>
     <div>
         <button onclick="filtrerPays('tous')">Tous</button>
         <button onclick="filtrerPays('Afrique')">Afrique</button>
@@ -79,7 +50,41 @@
         <div class="pays Europe">       <p>Italy</p>        </div>
     </div>
 
+</section>
 
+
+
+<div>
+
+    <section id="filter-section">
+          <div>
+              <label for="categorie-select">Filtrer par catégorie : </label>
+              <select id="categorie-select" onchange="filtrage(this.value)">
+                  <option value="all">Toutes les catégories</option>
+                  <option value="electronique">Electronique</option>
+                  <option value="sport">Sport</option>
+                  <option value="maison">Maison</option>
+              </select>
+          </div>
+
+
+
+          <section id="products">
+              <article class="electronique sport">Montre connectée</article>
+              <article class="electronique maison">Aspirateur Robot</article>
+              <article class="sport">Tapis de yoga</article>
+              <article class="electronique">Enceinte</article>
+              <article class="maison">Cafetiere</article>
+              <article class="sport">Ballon</article>
+              <article class="electronique maison">Lampe connectée</article>
+              <article class="sport maison">Rameur d'appartement</article>
+              <article class="electronique">Tablette graphique</article>
+              <article class="maison">Diffuseur d'huiles essentielles</article>
+          </section>
+    </section>
+
+
+  </div>
 
 </body>
 <script src="script10.js"></script>

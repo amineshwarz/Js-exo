@@ -4,12 +4,68 @@
 
 
 
+
+
+.parallax {
+    background-image: url("./img/fd.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*********** Exercie 10-2 Subrillance au clic ***********/
+
+.exercie10-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3em 3em 0em 3em;
+    gap: 2em; 
+    background-color: #ffffff84;
+
+}
+#btn{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+}
+
+
+
 /* Exercice 10-4 (JS - Fitrage par catégorie) */
+.filtre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2em 0;
+}
+
+#listePays{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff84;
+    margin-top: 1em;
+}
+h1 {
+    text-align: center;
+    margin-top: 5em;
+}
 .pays {
     display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #060202;
     border-radius: 5px;
     text-align: center;
     width: 150px;
@@ -21,3 +77,8 @@
 .cache {
     display: none;
 }
+
+#products article.hide {
+    display: none;
+   }
+  
