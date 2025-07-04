@@ -61,11 +61,9 @@
 //Exercice 11-2 (JS - construire un section html en JavaScript)
 let body = document.querySelector('body');
 
-
 let section = document.createElement('section');
 section.id = 'built-section';
 body.appendChild(section);
-
 
 let input = document.createElement('input');
 input.type = 'text';
@@ -79,15 +77,16 @@ button.appendChild(textNode);
 // button.textContent = 'Supprimer';
 section.appendChild(button);
 
-
-
 button.onclick = function deleteSection (){
     input.value = '';
 };
 
 
+//exercice 11-3 (JS - Integrer un composant web)
+document.getElementById('add-element').onclick = function () {
+    swal("Good job!", "You clicked the button!","success");
 
-
+    }
 
 
 
