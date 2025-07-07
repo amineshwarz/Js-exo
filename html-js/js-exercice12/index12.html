@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Exercice 12</title>
-    <link rel="stylesheet" href="style12.css">
+    <link rel="stylesheet" href="style12.css" />
 </head>
 <body class="parallax">
 
-
 <!-- JS Exercice 12-1 Composant: Accordéon -->
-    <section>
-        <h1>Exercice 12-1 Composant: Accordéon</h1>
-        <div class="accordion">
-            <div class="accordion-box">
-                <h2 class="accordion-title" >Titre 1</h2>
-                <div class="accordion-content">
-                    <p>Contenu de l'accordéon 1.</p>
-                </div>
-            </div>
-            <div class="accordion-box">
-                <h2 class="accordion-title"  >Titre 1</h2>
-                <div class="accordion-content">
-                    <p>Contenu de l'accordéon 1.</p>
-                </div>
-            </div>
-            <div class="accordion-box">
-                <h2 class="accordion-title" >Titre 1</h2>
-                <div class="accordion-content">
-                    <p>Contenu de l'accordéon 1.</p>
-                </div>
+<section>
+    <h1>Exercice 12-1 Composant: Accordéon</h1>
+    <div class="accordion">
+        <div class="accordion-box">
+            <h2 class="accordion-title">Titre 1</h2>
+            <div class="accordion-content">
+                <p>Contenu de l'accordéon 1.</p>
             </div>
         </div>
-    </section>
-
-
-    <div class="carousel">
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <div class="slides">
-            <img src="./img/plage1.jpg" class="slide active">
-            <img src="./img/plage2.jpg" class="slide">
-            <img src="./img/plage3.jpg" class="slide">
+        <div class="accordion-box">
+            <h2 class="accordion-title">Titre 2</h2>
+            <div class="accordion-content">
+                <p>Contenu de l'accordéon 2.</p>
+            </div>
         </div>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="accordion-box">
+            <h2 class="accordion-title">Titre 3</h2>
+            <div class="accordion-content">
+                <p>Contenu de l'accordéon 3.</p>
+            </div>
+        </div>
     </div>
+</section>
+
+<!-- JS Exercice 12-2 Composant: Galerie vidéo -->
+<section>
+    <h1>Galerie Vidéo</h1>
+    <div id="video-container">
+        <!-- iframe -->
+    </div>
+    <div id="video-buttons">
+        <!-- buttons  -->
+    </div>
+</section>
+
+
+
+
+
+
+<div class="carousel">
+    <button id="bouton" class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <div class="slides">
+        <img src="./img/plage1.jpg" class="slide active" />
+        <img src="./img/plage2.jpg" class="slide" />
+        <img src="./img/plage3.jpg" class="slide" />
+    </div>
+    <button id="bouton" class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script src="./script12.js" defer></script>
 </body>
-    <script src="./script12.js" defer></script>
 </html>
