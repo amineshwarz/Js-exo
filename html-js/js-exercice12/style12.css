@@ -6,3 +6,80 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* Style accordéon */
+.accordion {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+.accordion-box {
+    border-bottom: 1px solid #ccc;
+}
+.accordion-title {
+    text-align: center;
+    background-color: #e2e2e2;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.accordion-title:hover {
+    background-color: #d1d1d1;
+}
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+}   
+.accordion-content.active {
+    display: block;
+}
+
+/* Style du carrousel */
+/* .carousel {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+} */
