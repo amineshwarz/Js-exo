@@ -8,34 +8,36 @@
 </head>
 <body class="parallax">
 
-<!-- JS Exercice 12-1 Composant: Accordéon -->
+<!------------------ JS Exercice 12-1 Composant: Accordéon ---------------->
 <section>
-    <h1>Exercice 12-1 Composant: Accordéon</h1>
     <div class="accordion">
         <div class="accordion-box">
             <h2 class="accordion-title">Titre 1</h2>
-            <div class="accordion-content">
-                <p>Contenu de l'accordéon 1.</p>
-            </div>
+            <p class="accordion-content">Contenu de l'accordéon 1.</p>
+            
         </div>
         <div class="accordion-box">
             <h2 class="accordion-title">Titre 2</h2>
-            <div class="accordion-content">
-                <p>Contenu de l'accordéon 2.</p>
-            </div>
+            <p class="accordion-content">Contenu de l'accordéon 2.</p>
         </div>
         <div class="accordion-box">
             <h2 class="accordion-title">Titre 3</h2>
-            <div class="accordion-content">
-                <p>Contenu de l'accordéon 3.</p>
-            </div>
+            <p class="accordion-content">Contenu de l'accordéon 3.</p>
         </div>
     </div>
 </section>
 
-<!-- JS Exercice 12-2 Composant: Galerie vidéo -->
+
+<section class="carousel-section">
+    
+    <div id="carousel-container">
+    </div>
+
+    <div id="carousel-buttons">
+    </div>
+</section>
+<!------------------ JS Exercice 12-2 Composant: Galerie vidéo ------------->
 <section>
-    <h1>Galerie Vidéo</h1>
     <div id="video-container">
         <!-- iframe -->
     </div>
@@ -44,12 +46,18 @@
     </div>
 </section>
 
+<!-- -------JS Exercice 12-3 Composant: Carrousel d'images avec des boutons--------->
+
+
+<br><br><br><br><br><br>
 
 
 
 
 
-<div class="carousel">
+
+
+<!-- <div class="carousel">
     <button id="bouton" class="prev" onclick="changeSlide(-1)">&#10094;</button>
     <div class="slides">
         <img src="./img/plage1.jpg" class="slide active" />
@@ -57,8 +65,9 @@
         <img src="./img/plage3.jpg" class="slide" />
     </div>
     <button id="bouton" class="next" onclick="changeSlide(1)">&#10095;</button>
-</div>
+</div> -->
 
-<script src="./script12.js" defer></script>
+
 </body>
+    <script src="./script12.js" defer></script>
 </html>
