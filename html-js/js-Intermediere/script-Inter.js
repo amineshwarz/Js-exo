@@ -46,10 +46,23 @@ setInterval(randomLight, 1000);
  );
 
  //-------------- JS Exercice 4 JS Exercice 4 classe qui calcule la somme des nombres d'une liste ------------
-
-
- class  calcule {
-    constructor (sum){
-        
+ class SommeNombres {
+    constructor(listeNombres) {
+        this.listeNombres = listeNombres;
+    }
+    calculeSomme(){
+        let somme=0;
+        for (let nombre of this.listeNombres){
+            somme += nombre;
+        }
+        return somme;
+        console.log(nombre);
+    }
+    showResult () {
+        const somme = this.calculeSomme();
+        console.log( `la somme de liste est : ${somme} `);
     }
  }
+ const listeNombres = [1, 2, 3, 4, 5]; // bonnus faire en input et button 
+ const sommeNombres = new SommeNombres(listeNombres);
+ sommeNombres.showResult(); 
