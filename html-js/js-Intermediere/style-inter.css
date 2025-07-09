@@ -1,0 +1,119 @@
+/*----------------JS Exercice 1 Intermediere un feu tricolors----------------- */
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5em;
+    width: 50%;
+    height: 150px;
+    background-color: black;
+}
+.light{
+    display: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+}
+.active{
+    display: block;
+}
+.active red{
+    display: flex;
+    justify-content: flex-start;
+}
+.active .orange{
+    display: flex;
+    justify-content: center;
+}
+.active .green{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.red{
+    /* display: flex;
+    justify-content:flex-start; */
+    background-color: red;
+}
+
+.orange{
+    /* display: flex;
+    justify-content:center; */
+    background-color: orange;
+    
+   }
+.green{
+    /* display: flex;
+    justify-content:flex-end; */
+    background-color: green;
+}
+
+
+/*---------- JS Exercice modal avec un bouton ---------------*/
+
+.modal-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Modale */
+.modal-section { 
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 20px 0px 20px 0px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+.modal-content {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: 3em;
+    font-size: 18px;
+    color: #333;
+    background-color: aqua;
+}
+.modal-content h2 {
+    text-align: center;
+}
+  
+  /* Croix de fermeture */
+  .close {
+    
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s;
+  }
+  .close:hover {
+    color: #e74c3c;
+  }
+ 
