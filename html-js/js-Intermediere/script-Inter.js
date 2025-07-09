@@ -45,3 +45,6 @@ setInterval(randomLight, 1000);
  }
  );
 
+ //-------------- classe qui calcule la somme des nombres d'une liste ------------
+ 
+
