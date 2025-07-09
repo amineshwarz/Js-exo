@@ -45,6 +45,11 @@ setInterval(randomLight, 1000);
  }
  );
 
- //-------------- classe qui calcule la somme des nombres d'une liste ------------
- 
+ //-------------- JS Exercice 4 JS Exercice 4 classe qui calcule la somme des nombres d'une liste ------------
 
+
+ class  calcule {
+    constructor (sum){
+        
+    }
+ }
