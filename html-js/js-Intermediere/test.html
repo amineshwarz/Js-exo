@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculateur de Somme</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    #result { margin-top: 15px; font-weight: bold; }
+    input, button { padding: 8px; font-size: 1em; }
+  </style>
+</head>
+<body>
+  <h2>Calculateur de Somme</h2>
+  <input type="text" id="numberInput" placeholder="Entrez des nombres séparés par des virgules">
+  <button id="calcBtn">Calculer la somme</button>
+  <div id="result"></div>
+
+  <script>
+    class SommeListe {
+      constructor(inputId, resultId) {
+        this.input = document.getElementById(inputId);
+        this.resultDiv = document.getElementById(resultId);
+      }
+
+      calculerSomme() {
+        // Récupère la valeur, sépare par virgule, convertit en nombres
+        const valeurs = this.input.value.split(',')
+          .map(val => parseFloat(val.trim()))
+          .filter(val => !isNaN(val));
+        
+        if (valeurs.length === 0) {
+          this.resultDiv.textContent = "Veuillez entrer au moins un nombre valide.";
+          return;
+        }
+
+        // Calcule la somme
+        const somme = valeurs.reduce((acc, curr) => acc + curr, 0);
+        this.resultDiv.textContent = `La somme est : ${somme}`;
+      }
+    }
+
+    // Instancie la classe et ajoute l'événement au bouton
+    const calculateur = new SommeListe('numberInput', 'result');
+    document.getElementById('calcBtn').addEventListener('click', () => {
+      calculateur.calculerSomme();
+    });
+  </script>
+</body>
+</html>

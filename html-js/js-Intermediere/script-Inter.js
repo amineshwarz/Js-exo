@@ -45,24 +45,143 @@ setInterval(randomLight, 1000);
  }
  );
 
- //-------------- JS Exercice 4 JS Exercice 4 classe qui calcule la somme des nombres d'une liste ------------
- class SommeNombres {
-    constructor(listeNombres) {
-        this.listeNombres = listeNombres;
+ //-------------- JS Exercice 4  classe qui calcule la somme des nombres d'une liste ------------
+//  class SommeNombres {
+//     constructor(listeNombres) {
+//         this.listeNombres = listeNombres;
+//     }
+//     calculeSomme(){
+//         let somme=0;
+//         for (let nombre of this.listeNombres){
+//             somme += nombre;
+//         }
+//         return somme;
+//     }
+//     showResult () {
+//         const somme = this.calculeSomme();
+//         console.log( `la somme de liste est : ${somme} `);
+//     }
+//  }
+//  const listeNombres = [1, 2, 3, 4, 5]; // bonnus faire en input et button 
+//  const sommeNombres = new SommeNombres(listeNombres);
+//  sommeNombres.showResult(); 
+
+class SommeNombres {
+    constructor(inputId, resultId) {
+        this.inputN = document.getElementById(inputId);
+        this.divResult = document.getElementById(resultId)
     }
     calculeSomme(){
-        let somme=0;
-        for (let nombre of this.listeNombres){
-            somme += nombre;
-        }
-        return somme;
-        console.log(nombre);
+        const valeurs = this.inputN.value.split(',')
+        .map(val => parseFloat(val.trim()))
+        .filter(val => !isNaN(val));
+
+        const somme = valeurs.reduce((acc, curr) => acc + curr, 0);
+        this.divResult.textContent=`la somme de liste est : ${somme} `;
     }
-    showResult () {
-        const somme = this.calculeSomme();
-        console.log( `la somme de liste est : ${somme} `);
+}
+const calcul = new SommeNombres('inputNumbers','resultSomme');
+document.getElementById('calculBtn').addEventListener('click', () => {
+    calcul.calculeSomme();
+});
+
+
+
+
+
+
+
+ 
+ //-------------- JS Exercice 5  module de combat ------------
+ class Arme {
+    constructor(nom, poids, degats){
+        this.nom = nom;
+        this.poids = poids;
+        this.degats = degats;
+    }
+    showArme () {
+        return `Arme : ${this.nom}, son poids : ${this.poids}Kg, et elle fait : ${this.degats} de degats`;
     }
  }
- const listeNombres = [1, 2, 3, 4, 5]; // bonnus faire en input et button 
- const sommeNombres = new SommeNombres(listeNombres);
- sommeNombres.showResult(); 
+ class Sort {
+    constructor(type, puissance){
+        this.type = type;
+        this.puissance = puissance;
+    }
+    showSort () {
+        return `Type : ${this.type} et sa puissance : ${this.puissance}`;
+    }   
+ }
+ const epee = new Arme('grand Épee', 15, 50);
+ const arc = new Arme('petit Arc', 5, 40);
+
+ const glace = new Sort('pluis de glace', 70);
+ const shurigan = new Sort('multiple churigan', 60);
+
+ console.log (epee.showArme());
+ console.log (arc.showArme());
+ console.log (glace.showSort());
+ console.log (shurigan.showSort());
+
+//-------------- JS Exercice 6  module de Personnage ------------
+class Personnage {
+    constructor(nom, sante, force, titre){
+        this.nom = nom;
+        this.sante = sante;
+        this.force = force;
+        this.titre = titre;
+    }
+    showPersonnage(){
+        return `Nom : ${this.nom}, Santé : ${this.sante}, Force : ${this.force}, Titre : ${this.titre}`;
+    }
+}
+class Guerrier extends Personnage {
+    constructor(nom, sante, force, arme, armure){
+        super(nom, sante, force, "Guerrier");
+        this.arme = arme;
+        this.armure=armure;
+    }
+    showGurrier(){
+        return `${super.showPersonnage()}, Arme : ${this.arme}, Armure : ${this.sante}`;
+    }
+}
+class Mage extends Personnage {
+    constructor(nom, sante, force, mana, element){
+        super(nom, sante, force, "Mage");
+        this.mana = mana;
+        this.element=element;
+    }
+    showMage(){
+        return `${super.showPersonnage()},Mana : ${this.mana}, element: ${this.element}`;
+    }
+}
+class Archer extends Personnage {
+    constructor(nom, sante, force, precision, fleche){
+        super(nom, sante, force, "Archer");
+        this.precision = precision;
+        this.fleche=fleche;
+    }
+    showArcher(){
+        return `${super.showPersonnage()}, Precision : ${this.precision}, Fléches : ${this.fleche}`;
+    }
+}
+class Epeiste extends Personnage {
+    constructor(nom, sante, force, degats, epee){
+        super(nom, sante, force, "Epeiste");
+        this.degats = degats;
+        this.epee = epee;
+    }
+    showEpeiste(){
+        return `${super.showPersonnage()}, Dégats : ${this.degats}, Épee : ${this.epee}`;
+    }
+}
+
+const guerrier = new Guerrier('Zlatan', 195, 100, 'Gun','cowboy');
+const mage = new Mage('Docteur Strange', 150, 90, 200,'Temps');
+const archer = new Archer('Arrow', 95, 90, 100, 80);
+const epeiste = new Epeiste('zorro', 200, 160, 80, 3); 
+
+console.log(guerrier.showGurrier());
+console.log(mage.showMage());
+console.log(archer.showArcher());
+console.log(epeiste.showEpeiste());
