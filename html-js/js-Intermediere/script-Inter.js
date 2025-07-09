@@ -77,7 +77,7 @@ class SommeNombres {
         .filter(val => !isNaN(val));
 
         const somme = valeurs.reduce((acc, curr) => acc + curr, 0);
-        this.divResult.textContent=`la somme de liste est : ${somme} `;
+        this.divResult.innerHTML=`la somme de la liste est : <strong> ${somme} </strong>`;
     }
 }
 const calcul = new SommeNombres('inputNumbers','resultSomme');
@@ -118,10 +118,21 @@ document.getElementById('calculBtn').addEventListener('click', () => {
  const glace = new Sort('pluis de glace', 70);
  const shurigan = new Sort('multiple churigan', 60);
 
- console.log (epee.showArme());
- console.log (arc.showArme());
- console.log (glace.showSort());
- console.log (shurigan.showSort());
+//  console.log (epee.showArme());
+//  console.log (arc.showArme());
+//  console.log (glace.showSort());
+//  console.log (shurigan.showSort());
+const contenu = `
+      <div class="item">${epee.showArme()}</div>
+      <div class="item">${arc.showArme()}</div>
+      <div class="item">${glace.showSort()}</div>
+      <div class="item">${shurigan.showSort()}</div>
+    `;
+const result = document.getElementById('resultDiv');
+result.innerHTML = contenu;
+
+
+
 
 //-------------- JS Exercice 6  module de Personnage ------------
 class Personnage {
@@ -177,11 +188,20 @@ class Epeiste extends Personnage {
 }
 
 const guerrier = new Guerrier('Zlatan', 195, 100, 'Gun','cowboy');
-const mage = new Mage('Docteur Strange', 150, 90, 200,'Temps');
+const mage = new Mage('Strange', 150, 90, 200,'Temps');
 const archer = new Archer('Arrow', 95, 90, 100, 80);
 const epeiste = new Epeiste('zorro', 200, 160, 80, 3); 
 
-console.log(guerrier.showGurrier());
-console.log(mage.showMage());
-console.log(archer.showArcher());
-console.log(epeiste.showEpeiste());
+// console.log(guerrier.showGurrier());
+// console.log(mage.showMage());
+// console.log(archer.showArcher());
+// console.log(epeiste.showEpeiste());
+
+const content = `
+      <div class="item">${guerrier.showGurrier()}</div>
+      <div class="item">${mage.showMage()}</div>
+      <div class="item">${archer.showArcher()}</div>
+      <div class="item">${epeiste.showEpeiste()}</div>
+    `;
+const show = document.getElementById('showDiv');
+show.innerHTML = content;

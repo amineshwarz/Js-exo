@@ -2,48 +2,55 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Calculateur de Somme</title>
+  <title>Affichage des Armes et Sorts</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 30px; }
-    #result { margin-top: 15px; font-weight: bold; }
-    input, button { padding: 8px; font-size: 1em; }
+    #resultat { margin-top: 20px; background: #f4f4f4; padding: 15px; border-radius: 8px; }
   </style>
 </head>
 <body>
-  <h2>Calculateur de Somme</h2>
-  <input type="text" id="numberInput" placeholder="Entrez des nombres séparés par des virgules">
-  <button id="calcBtn">Calculer la somme</button>
-  <div id="result"></div>
+  <h2>Armes et Sorts</h2>
+  <div id="resultat"></div>
 
   <script>
-    class SommeListe {
-      constructor(inputId, resultId) {
-        this.input = document.getElementById(inputId);
-        this.resultDiv = document.getElementById(resultId);
+    class Arme {
+      constructor(nom, poids, degats){
+          this.nom = nom;
+          this.poids = poids;
+          this.degats = degats;
       }
-
-      calculerSomme() {
-        // Récupère la valeur, sépare par virgule, convertit en nombres
-        const valeurs = this.input.value.split(',')
-          .map(val => parseFloat(val.trim()))
-          .filter(val => !isNaN(val));
-        
-        if (valeurs.length === 0) {
-          this.resultDiv.textContent = "Veuillez entrer au moins un nombre valide.";
-          return;
-        }
-
-        // Calcule la somme
-        const somme = valeurs.reduce((acc, curr) => acc + curr, 0);
-        this.resultDiv.textContent = `La somme est : ${somme}`;
+      showArme () {
+          return `Arme : ${this.nom}, son poids : ${this.poids}Kg, et elle fait : ${this.degats} de degats`;
       }
     }
+    class Sort {
+      constructor(type, puissance){
+          this.type = type;
+          this.puissance = puissance;
+      }
+      showSort () {
+          return `Type : ${this.type} et sa puissance : ${this.puissance}`;
+      }   
+    }
 
-    // Instancie la classe et ajoute l'événement au bouton
-    const calculateur = new SommeListe('numberInput', 'result');
-    document.getElementById('calcBtn').addEventListener('click', () => {
-      calculateur.calculerSomme();
-    });
+    const epee = new Arme('grand Épee', 15, 50);
+    const arc = new Arme('petit Arc', 5, 40);
+
+    const glace = new Sort('pluis de glace', 70);
+    const shurigan = new Sort('multiple churigan', 60);
+
+    // On récupère le div
+    const resultatDiv = document.getElementById('resultat');
+
+    // On crée le contenu HTML à afficher
+    const contenu = `
+      <div>${epee.showArme()}</div>
+      <div>${arc.showArme()}</div>
+      <div>${glace.showSort()}</div>
+      <div>${shurigan.showSort()}</div>
+    `;
+
+    // On insère le contenu dans le div
+    resultatDiv.innerHTML = contenu;
   </script>
 </body>
 </html>
