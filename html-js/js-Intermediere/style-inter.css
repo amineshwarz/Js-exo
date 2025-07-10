@@ -5,6 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 .title{
     font-family: system-ui;
@@ -195,7 +196,7 @@
     height: 150px;
 }
 .item{
-    padding-left: 5em;
+    padding-left: 6em;
     padding-bottom: 1em;
 }
 
@@ -203,17 +204,16 @@
 #showDiv{
     margin: auto;
     width: 50%;
-    display: flex;
-    flex-direction: column;
+     display: flex; 
+    /* flex-direction: column; */
     background: #fff;
     padding: 20px 0px 20px 0px;
     border-radius: 0px 0px 8px 8px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    margin-bottom: 5em; 
-    font-size: smaller;  
-    
+    margin-bottom: 5em;       
 }
-.item{
-    padding-left: 4em;
+
+.items{
+    padding-left: 2.5em;
     padding-bottom: 1em;
 }

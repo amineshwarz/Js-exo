@@ -143,7 +143,7 @@ class Personnage {
         this.titre = titre;
     }
     showPersonnage(){
-        return `Nom : ${this.nom}, Santé : ${this.sante}, Force : ${this.force}, Titre : ${this.titre}`;
+        return `Nom : ${this.nom}, <br>  Santé : ${this.sante},  <br> Force : ${this.force},  <br> Titre : ${this.titre}`;
     }
 }
 class Guerrier extends Personnage {
@@ -153,7 +153,7 @@ class Guerrier extends Personnage {
         this.armure=armure;
     }
     showGurrier(){
-        return `${super.showPersonnage()}, Arme : ${this.arme}, Armure : ${this.sante}`;
+        return `<br> ${super.showPersonnage()},<br>Arme : ${this.arme}, <br> Armure : ${this.sante}`;
     }
 }
 class Mage extends Personnage {
@@ -163,7 +163,7 @@ class Mage extends Personnage {
         this.element=element;
     }
     showMage(){
-        return `${super.showPersonnage()},Mana : ${this.mana}, element: ${this.element}`;
+        return `<br>${super.showPersonnage()},<br> Mana : ${this.mana}, <br> element: ${this.element}`;
     }
 }
 class Archer extends Personnage {
@@ -173,7 +173,7 @@ class Archer extends Personnage {
         this.fleche=fleche;
     }
     showArcher(){
-        return `${super.showPersonnage()}, Precision : ${this.precision}, Fléches : ${this.fleche}`;
+        return `<br>${super.showPersonnage()},<br> Precision : ${this.precision}, <br> Fléches : ${this.fleche}`;
     }
 }
 class Epeiste extends Personnage {
@@ -183,7 +183,7 @@ class Epeiste extends Personnage {
         this.epee = epee;
     }
     showEpeiste(){
-        return `${super.showPersonnage()}, Dégats : ${this.degats}, Épee : ${this.epee}`;
+        return `<br>${super.showPersonnage()}, <br> Dégats : ${this.degats}, <br> Épee : ${this.epee}`;
     }
 }
 
@@ -192,16 +192,16 @@ const mage = new Mage('Strange', 150, 90, 200,'Temps');
 const archer = new Archer('Arrow', 95, 90, 100, 80);
 const epeiste = new Epeiste('zorro', 200, 160, 80, 3); 
 
-// console.log(guerrier.showGurrier());
-// console.log(mage.showMage());
-// console.log(archer.showArcher());
-// console.log(epeiste.showEpeiste());
+console.log(guerrier.showGurrier());
+console.log(mage.showMage());
+console.log(archer.showArcher());
+console.log(epeiste.showEpeiste());
 
 const content = `
-      <div class="item">${guerrier.showGurrier()}</div>
-      <div class="item">${mage.showMage()}</div>
-      <div class="item">${archer.showArcher()}</div>
-      <div class="item">${epeiste.showEpeiste()}</div>
+      <div class="items">${guerrier.showGurrier()}</div>
+      <div class="items">${mage.showMage()}</div>
+      <div class="items">${archer.showArcher()}</div>
+      <div class="items">${epeiste.showEpeiste()}</div>
     `;
 const show = document.getElementById('showDiv');
 show.innerHTML = content;
