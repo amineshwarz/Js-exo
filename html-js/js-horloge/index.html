@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS - HORLOGE</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="parallax" >
+    <!-- section qui contient l'horloge numérique-->
+    <section>
+        <h2>HORLOGE NUMÉRIQUE</h2>
+        <div class="box-horloge-n">
+            <span id='horloge' class="horloge-numerique"></span>
+            <div class="divAlarm">
+                <input type="time" id="alarmTime">
+                <button onclick="setAlarm()">Alarme</button>
+                <p id="alarm-message"></p>
+            </div>
+        </div>
+        
+<p id="alarm-message"></p>
+    </section>
+
+    <!-- section qui contient l'horloge Analogique-->
+    <section>
+        <h2>HORLOGE ANALOGIQUE</h2>
+        <div class="box-horloge-a">
+            <div class="clock">    
+                <span style="--var:0;">XII</span>
+                <span style="--var:1;">I</span>
+                <span style="--var:2;">II</span>
+                <span style="--var:3;">III</span>
+                <span style="--var:4;">IV</span>
+                <span style="--var:5;">V</span>
+                <span style="--var:6;">VI</span>
+                <span style="--var:7;">VII</span>
+                <span style="--var:8;">VIII</span>
+                <span style="--var:9;">IX</span>
+                <span style="--var:10;">X</span>
+                <span style="--var:11;">XI</span>
+
+                <div class="barre hour" id="hour-barre"></div>
+                <div class="barre minute" id="minute-barre"></div>
+                <div class="barre second" id="second-barre"></div>
+                <div class="center-dot"></div> 
+            </div>
+        </div>
+
+    </section>
+</body>
+    <script src="./script.js"></script>
+</html>

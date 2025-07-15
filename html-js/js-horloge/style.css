@@ -1,0 +1,141 @@
+.parallax{
+    background-image: url("./img/fd.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    font-family: sans-serif;
+}
+/*-----------CSS HORLOGE NUMERIQUE------------*/
+.box-horloge-n{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5em;
+    width: 50%;
+    background: #81818182;
+    padding: 20px 0px 20px 0px;
+    border-radius:8px ;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+.divAlarm{
+    display: flex;
+    margin-top: 1em;
+}
+.divAlarm button{
+    margin-left:1em ;
+}
+
+.divAlarm input{
+    width: 50px;
+    text-align: center;
+    cursor:pointer;
+    display: block;
+    color: rgb(0, 60, 255);
+    border-radius: 4px ;
+    border: none;
+    
+}
+.horloge-numerique{
+    background-color:#e1dede;
+    color:rgb(40, 35, 187);
+    font-size:40px;
+    margin: auto;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 23px Black;
+}
+
+/*-----------CSS HORLOGE ANALOGIQUE------------*/
+
+.box-horloge-a{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5em;
+    width: 50%;
+    height: 400px;
+    background: #81818182;
+    padding: 20px 0px 20px 0px;
+    border-radius:8px ;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 5px solid #ebe8e8;
+    border-radius: 50%;
+    background-color:#0f0e0e;
+    box-shadow: 0px 15px 23px Black;
+}
+  
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--var)));
+    inset: 12px;
+    text-align: center;
+    color: #83F52C;
+    text-shadow: 0 1px 10px #83F52C; 
+    font-size: 25px;
+}
+
+#second-barre { /* pour que l'eguille fait pas une rotation a l'envers */
+    transition: none;
+  }
+
+  .barre {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    /* transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.3, 1); */
+  }
+  
+  .hour {
+    width: 6px;
+    height: 70px;
+    background: #fff;
+    z-index: 3;
+    border-radius: 4px;
+  }
+  
+  .minute {
+    width: 4px;
+    height: 100px;
+    background: #fff;
+    z-index: 2;
+    border-radius: 4px;
+  }
+  
+  .second {
+    width: 2px;
+    height: 120px;
+    background: rgb(3, 63, 245);
+    z-index: 1;
+    border-radius: 4px;
+  }
+  
+  .center-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+  }
