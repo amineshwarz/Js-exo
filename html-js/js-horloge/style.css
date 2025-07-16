@@ -55,6 +55,12 @@ h2{
     border-radius: 10px;
     box-shadow: 0px 5px 23px Black;
 }
+#alarm-message{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #e2e8ed;
+    background-color: #210aeb;
+}
 
 /*-----------CSS HORLOGE ANALOGIQUE------------*/
 

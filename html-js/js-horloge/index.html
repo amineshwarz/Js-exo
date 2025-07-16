@@ -9,14 +9,16 @@
 <body class="parallax" >
     <!-- section qui contient l'horloge numérique-->
     <section>
+
         <h2>HORLOGE NUMÉRIQUE</h2>
         <div class="box-horloge-n">
             <span id='horloge' class="horloge-numerique"></span>
             <div class="divAlarm">
                 <input type="time" id="alarmTime">
                 <button onclick="setAlarm()">Alarme</button>
-                <p id="alarm-message"></p>
+                <button onclick="stopAlarm()" id="stopButton" style="display:none;">Stop</button>
             </div>
+            <p id="alarm-message"></p>
         </div>
         
 <p id="alarm-message"></p>
@@ -44,6 +46,7 @@
                 <div class="barre minute" id="minute-barre"></div>
                 <div class="barre second" id="second-barre"></div>
                 <div class="center-dot"></div> 
+
             </div>
         </div>
 

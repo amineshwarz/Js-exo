@@ -1,25 +1,30 @@
 // horloge numérique
 let alarmTime = null;
-// let alarmTriggered = false;
+let alarmTriggered = false;
+let alarmSound = null;
 
 function showDate() {
     var date = new Date()
     var heures = date.getHours();
     var minutes = date.getMinutes();
     var secondes = date.getSeconds();
+
     if( heures < 10 ){ heures = '0' + heures; }
     if( minutes < 10 ){ minutes = '0' + minutes; }
     if( secondes < 10 ){ secondes = '0' + secondes; }
     
     var time = heures + ':' + minutes + ':' + secondes;
-    document.getElementById('horloge').innerHTML =time;
+    document.getElementById('horloge').innerHTML = time;
 
     // Vérifie si l'heure actuelle correspond à l'alarme
     if (alarmTime === heures + ':' + minutes && !alarmTriggered) {
         alarmTriggered = true; 
         document.getElementById('alarm-message').innerHTML = 'Alarme ! Il est ' + time;
-        // Optionnel : lire un son
-        // new Audio('alarm.mp3').play(); // Ajoute un son si tu veux
+        document.getElementById('stopButton').style.display = 'inline'; // afficher le bouton Stop
+        
+        alarmSound = new Audio('./img/alarme.mp3').play(); // Ajoute un son si tu veux
+        alarmSound.loop = true;
+        alarmSound.play();
         alert('⏰ Alarme !');
     }
     refresh();  
@@ -37,6 +42,21 @@ function setAlarm() {
         alarmTime = input;
         alarmTriggered = false;
         document.getElementById('alarm-message').innerHTML = 'Alarme réglée pour : ' + alarmTime;
+        document.getElementById('stopButton').style.display = 'none'; // cacher bouton stop
+        if (alarmSound) {
+            alarmSound.pause();
+            alarmSound = null ;
+        }
+    }
+}
+function stopAlarm() {
+    alarmTriggered = false;
+    document.getElementById('alarm-message').innerHTML = 'Alarme arrêtée.';
+    document.getElementById('stopButton').style.display = 'none';
+    if(alarmSound) {
+        alarmSound.pause();
+        alarmSound.currentTime = 0;
+        alarmSound = null;
     }
 }
 showDate();
