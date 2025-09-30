@@ -126,3 +126,8 @@ analogiqueClock();
 //   // Met à jour chaque seconde
 //   setInterval(updateClock, 1000);
 //   updateClock(); // pour initialiser à l'ouverture
+
+
+
+
+

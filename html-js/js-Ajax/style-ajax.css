@@ -59,14 +59,19 @@ input[type="text"] {
 button {
     background-color: #dae6f4;
     border: none;
-    border-radius: 2em;
+    /* border-radius: 2em; */
     color: #191a28;
-    padding: 7px 20px;
+    padding: 5px 10px;
     text-align: center;
     font-size: 10px;
-    margin: 4px 2px;
+    margin: 2px 0px;
     cursor: pointer;
-    width: 130px;
+    width: 100px;
+}
+button:hover {
+    background-color: #191a28;
+    color: white;
+    transition: 0.5s;
 }
 #meteo{
     display: flex;

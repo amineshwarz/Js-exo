@@ -1,4 +1,5 @@
-// Exercice Ajax 1 (Ajax - Charger et afficher un texte)
+// ------------------------Exercice Ajax 1 (Ajax - Charger et afficher un texte)----------------------
+
 function chargerTexte() {
     // fetch('https://jsonplaceholder.typicode.com/posts/1')
     fetch('./texte.txt')
@@ -17,7 +18,8 @@ function chargerTexte() {
 
 
 
-// Exercice Ajax 2 (Charger et afficher des utilisateurs)
+//--------------------------- Exercice Ajax 2 (Charger et afficher des utilisateurs)----------------------
+
 function chargerUtilisateurs() {
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
@@ -35,7 +37,8 @@ function chargerUtilisateurs() {
 }
 
 
-// Exercice Ajax 3 (Charger et afficher un post )
+// -----------------------------------Exercice Ajax 3 (Charger et afficher un post )----------------------
+
 function chargerPost() {
     fetch('https://jsonplaceholder.typicode.com/posts/2')
         .then(response => response.json())
@@ -48,7 +51,7 @@ function chargerPost() {
         });
 }
 
-// Exercice Ajax 4 (Affiche la météo d’une ville )
+//---------------------------------- Exercice Ajax 4 (Affiche la météo d’une ville )----------------------
 
 function voirMeteo() {
     let ville = document.getElementById('ville').value; 
